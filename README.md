@@ -18,10 +18,11 @@ display: This function displays all the code snippets in the binary search tree.
 The main function provides a simple command-line menu that allows users to interact with the code repository. The options available in the menu are:
 
 1. Insert a code snippet.
-2. Remove a code snippet.
-3. Search for code snippets.
-4. Display all code snippets.
-5. Exit the program.
+2. Share/ Publish a code snippet.
+3. Remove a code snippet.
+4. Search for code snippets.
+5. Display all code snippets.
+6. Exit the program.
 
 Users can choose the desired option by entering the corresponding number. For options 1 and 2, users will be prompted to enter the language, functionality, and code of the snippet they want to insert or remove. For option 3, users will provide the search criteria (language and functionality), and the program will display all matching code snippets. Option 4 will display all code snippets currently stored in the repository. Option 5 exits the program.
 
