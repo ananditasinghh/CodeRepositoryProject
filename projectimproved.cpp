@@ -1,5 +1,6 @@
 //THIS CODE IS IMPROVED 
 //Code Sharing: Enabling features to allow users to share code snippets with others or publish their snippets to a central repository, similar to GitHub's concept of forking and publishing projects.
+//User is now prompted to decide whether they want to share/publish their codes. Depending on their choice, the snippet will either be inserted as a private snippet or shared/published to the central repository.
 
 
 #include <iostream>
