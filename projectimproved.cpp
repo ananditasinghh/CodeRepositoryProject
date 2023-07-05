@@ -196,6 +196,7 @@ private:
 
 // printMenu displays a different options for interacting with the code repository
 void printMenu() {
+    std::cout << "Welcome!! Hello!! Hola!!! \n";
     std::cout << "===== Code Repository Menu =====\n";
     std::cout << "1. Insert a code snippet\n";
     std::cout << "2. Share/Publish a code snippet\n";
@@ -277,7 +278,7 @@ int main() {
                 if (result.empty()) {
                     std::cout << "No matching code snippets found.\n";
                 } else {
-                    std::cout << "Matching code snippets:\n";
+                    std::cout << "Matching code snippets: \n";
                     for (const CodeSnippet& snippet : result) {
                         std::cout << "Language: " << snippet.language << ", Functionality: " << snippet.functionality << "\n";
                         std::cout << "Code:\n" << snippet.code << "\n";
@@ -291,7 +292,7 @@ int main() {
                 break;
             }
             case 6:
-                std::cout << "Exiting the program. Goodbye!\n";
+                std::cout << "Exiting the program.... Byiessss !\n";
                 break;
             default:
                 std::cout << "Invalid choice. Please try again.\n";
