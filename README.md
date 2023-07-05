@@ -33,6 +33,7 @@ I'm planning to work on the following aspects of this project in the near future
 - Able to change or modify the already existing code and update it.
 - Code Categorisation to be more efficient - to add additional meta data such as tags or categories.
 - Code Sharing: Enabling features to allow users to share code snippets with others or publish their snippets to a central repository, similar to GitHub's concept of forking and publishing projects.
+  (Happy to announce that this issue is fixed in the improved code)
 - User interface - Although this is my first project and I have really enjoyed making it and running it, but I will agree that an output on the terminal can be improved by a more interactive and user friendly graphical interface.
 
 
