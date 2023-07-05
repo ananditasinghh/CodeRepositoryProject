@@ -1,3 +1,7 @@
+//THIS CODE IS IMPROVED 
+//Code Sharing: Enabling features to allow users to share code snippets with others or publish their snippets to a central repository, similar to GitHub's concept of forking and publishing projects.
+
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -213,7 +217,7 @@ CodeSnippet getCodeSnippetFromUser() {
     std::string functionality;
     std::getline(std::cin, functionality);
 
-    std::cout << "Enter the code (press Enter followed by \".\" on a new line to finish):\n";
+    std::cout << "Enter the code : ";
     std::string code;
     std::string line;
     while (std::getline(std::cin, line) && line != ".") {
