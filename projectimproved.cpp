@@ -292,7 +292,7 @@ int main() {
                 break;
             }
             case 6:
-                std::cout << "Exiting the program.... Byiessss !\n";
+                std::cout << "Exiting the program.... ok Byiessss !\n";
                 break;
             default:
                 std::cout << "Invalid choice. Please try again.\n";
