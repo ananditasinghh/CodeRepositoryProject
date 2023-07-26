@@ -75,65 +75,6 @@
 
     <div id="searchResults"></div>
 
-    <script>
-        function getCodeSnippetFromUser() {
-            var language = document.getElementById("language").value;
-            var functionality = document.getElementById("functionality").value;
-            var code = document.getElementById("code").value;
-            return {
-                language: language,
-                functionality: functionality,
-                code: code
-            };
-        }
-
-        function insertSnippet() {
-            var snippet = getCodeSnippetFromUser();
-            var share = confirm("Do you want to share this code snippet?");
-            var requestData = {
-                snippet: snippet,
-                share: share
-            };
  
-        }
-
-        function shareSnippet() {
-            var snippet = getCodeSnippetFromUser();
- 
-        }
-
-        function removeSnippet() {
-            var snippet = getCodeSnippetFromUser();
- 
-        }
-
-        function searchSnippets() {
-            var language = document.getElementById("language").value;
-            var functionality = document.getElementById("functionality").value;
-    
-        }
-
-        function displaySearchResults(data) {
-            var searchResultsDiv = document.getElementById("searchResults");
-            searchResultsDiv.innerHTML = "";
-            if (data.length === 0) {
-                searchResultsDiv.innerHTML = "No matching code snippets found.";
-            } else {
-                data.forEach(snippet => {
-                    var snippetDiv = document.createElement("div");
-                    var language = document.createElement("p");
-                    language.textContent = "Language: " + snippet.language;
-                    var functionality = document.createElement("p");
-                    functionality.textContent = "Functionality: " + snippet.functionality;
-                    var code = document.createElement("pre");
-                    code.textContent = "Code:\n" + snippet.code;
-                    snippetDiv.appendChild(language);
-                    snippetDiv.appendChild(functionality);
-                    snippetDiv.appendChild(code);
-                    searchResultsDiv.appendChild(snippetDiv);
-                });
-            }
-        }
-    </script>
 </body>
 </html>
