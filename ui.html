@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Repository</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+        }
+
+        .form-container {
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            padding: 8px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Code Repository</h1>
+    <div class="form-container">
+        <label for="language">Language:</label>
+        <input type="text" id="language">
+        <label for="functionality">Functionality:</label>
+        <input type="text" id="functionality">
+        <br>
+        <label for="code">Code:</label>
+        <br>
+        <textarea id="code" rows="10" cols="50"></textarea>
+        <br>
+        <button onclick="insertSnippet()">Insert</button>
+        <button onclick="shareSnippet()">Share/Publish</button>
+        <button onclick="removeSnippet()">Remove</button>
+        <button onclick="searchSnippets()">Search</button>
+    </div>
+
+    <div id="searchResults"></div>
+
+    <script>
+        function getCodeSnippetFromUser() {
+            var language = document.getElementById("language").value;
+            var functionality = document.getElementById("functionality").value;
+            var code = document.getElementById("code").value;
+            return {
+                language: language,
+                functionality: functionality,
+                code: code
+            };
+        }
+
+        function insertSnippet() {
+            var snippet = getCodeSnippetFromUser();
+            var share = confirm("Do you want to share this code snippet?");
+            var requestData = {
+                snippet: snippet,
+                share: share
+            };
+ 
+        }
+
+        function shareSnippet() {
+            var snippet = getCodeSnippetFromUser();
+ 
+        }
+
+        function removeSnippet() {
+            var snippet = getCodeSnippetFromUser();
+ 
+        }
+
+        function searchSnippets() {
+            var language = document.getElementById("language").value;
+            var functionality = document.getElementById("functionality").value;
+    
+        }
+
+        function displaySearchResults(data) {
+            var searchResultsDiv = document.getElementById("searchResults");
+            searchResultsDiv.innerHTML = "";
+            if (data.length === 0) {
+                searchResultsDiv.innerHTML = "No matching code snippets found.";
+            } else {
+                data.forEach(snippet => {
+                    var snippetDiv = document.createElement("div");
+                    var language = document.createElement("p");
+                    language.textContent = "Language: " + snippet.language;
+                    var functionality = document.createElement("p");
+                    functionality.textContent = "Functionality: " + snippet.functionality;
+                    var code = document.createElement("pre");
+                    code.textContent = "Code:\n" + snippet.code;
+                    snippetDiv.appendChild(language);
+                    snippetDiv.appendChild(functionality);
+                    snippetDiv.appendChild(code);
+                    searchResultsDiv.appendChild(snippetDiv);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
